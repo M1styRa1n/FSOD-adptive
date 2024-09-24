@@ -1,0 +1,211 @@
+save to: /users/acr23hk/paper/fsod-dc/dataset/check/voc/1726356812/base1/model_final-fsod.pth
+[09/18 00:23:05 detectron2]: Rank of current process: 0. World size: 4
+[09/18 00:23:05 detectron2]: Full config saved to checkpoints/voc/1726615376/fsod1/1shot/seed1/config.yaml
+[09/18 00:23:07 d2.data.build]: Removed 0 images with no usable annotations. 20 images left.
+[09/18 00:23:07 d2.data.dataset_mapper]: [DatasetMapper] Augmentations used in training: [ResizeShortestEdge(short_edge_length=..., max_size=1333, sample_style='choice'), RandomFlip()]
+[09/18 00:23:07 d2.data.build]: Using training sampler TrainingSampler
+[09/18 00:23:07 d2.data.common]: Serializing 20 elements to byte tensors and concatenating them all ...
+[09/18 00:23:07 d2.data.common]: Serialized dataset takes 0.01 MiB
+Traceback (most recent call last):
+  File "main.py", line 53, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 26, in main
+    trainer = Trainer(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 396, in __init__
+    self.register_hooks(self.build_hooks())
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 463, in build_hooks
+    ret.append(hooks.PeriodicWriter(self.build_writers(), period=20))
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 475, in build_writers
+    return default_writers(self.cfg.OUTPUT_DIR, self.max_iter)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 248, in default_writers
+    TensorboardXWriter(output_dir),
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/utils/events.py", line 145, in __init__
+    from torch.utils.tensorboard import SummaryWriter
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/utils/tensorboard/__init__.py", line 4, in <module>
+    LooseVersion = distutils.version.LooseVersion
+AttributeError: module 'distutils' has no attribute 'version'
+
+[09/18 00:23:24 detectron2]: Rank of current process: 0. World size: 4
+[09/18 00:23:24 detectron2]: Full config saved to checkpoints/voc/1726615376/fsod1/2shot/seed1/config.yaml
+[09/18 00:23:26 d2.data.build]: Removed 0 images with no usable annotations. 40 images left.
+[09/18 00:23:26 d2.data.dataset_mapper]: [DatasetMapper] Augmentations used in training: [ResizeShortestEdge(short_edge_length=..., max_size=1333, sample_style='choice'), RandomFlip()]
+[09/18 00:23:26 d2.data.build]: Using training sampler TrainingSampler
+[09/18 00:23:26 d2.data.common]: Serializing 40 elements to byte tensors and concatenating them all ...
+[09/18 00:23:26 d2.data.common]: Serialized dataset takes 0.01 MiB
+Traceback (most recent call last):
+  File "main.py", line 53, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 26, in main
+    trainer = Trainer(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 396, in __init__
+    self.register_hooks(self.build_hooks())
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 463, in build_hooks
+    ret.append(hooks.PeriodicWriter(self.build_writers(), period=20))
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 475, in build_writers
+    return default_writers(self.cfg.OUTPUT_DIR, self.max_iter)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 248, in default_writers
+    TensorboardXWriter(output_dir),
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/utils/events.py", line 145, in __init__
+    from torch.utils.tensorboard import SummaryWriter
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/utils/tensorboard/__init__.py", line 4, in <module>
+    LooseVersion = distutils.version.LooseVersion
+AttributeError: module 'distutils' has no attribute 'version'
+
+[09/18 00:23:41 detectron2]: Rank of current process: 0. World size: 4
+[09/18 00:23:41 detectron2]: Full config saved to checkpoints/voc/1726615376/fsod1/3shot/seed1/config.yaml
+[09/18 00:23:42 d2.data.build]: Removed 0 images with no usable annotations. 60 images left.
+[09/18 00:23:42 d2.data.dataset_mapper]: [DatasetMapper] Augmentations used in training: [ResizeShortestEdge(short_edge_length=..., max_size=1333, sample_style='choice'), RandomFlip()]
+[09/18 00:23:42 d2.data.build]: Using training sampler TrainingSampler
+[09/18 00:23:42 d2.data.common]: Serializing 60 elements to byte tensors and concatenating them all ...
+[09/18 00:23:42 d2.data.common]: Serialized dataset takes 0.02 MiB
+Traceback (most recent call last):
+  File "main.py", line 53, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 26, in main
+    trainer = Trainer(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 396, in __init__
+    self.register_hooks(self.build_hooks())
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 463, in build_hooks
+    ret.append(hooks.PeriodicWriter(self.build_writers(), period=20))
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 475, in build_writers
+    return default_writers(self.cfg.OUTPUT_DIR, self.max_iter)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 248, in default_writers
+    TensorboardXWriter(output_dir),
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/utils/events.py", line 145, in __init__
+    from torch.utils.tensorboard import SummaryWriter
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/utils/tensorboard/__init__.py", line 4, in <module>
+    LooseVersion = distutils.version.LooseVersion
+AttributeError: module 'distutils' has no attribute 'version'
+
+[09/18 00:23:59 detectron2]: Rank of current process: 0. World size: 4
+[09/18 00:23:59 detectron2]: Full config saved to checkpoints/voc/1726615376/fsod1/5shot/seed1/config.yaml
+[09/18 00:24:01 d2.data.build]: Removed 0 images with no usable annotations. 100 images left.
+[09/18 00:24:01 d2.data.dataset_mapper]: [DatasetMapper] Augmentations used in training: [ResizeShortestEdge(short_edge_length=..., max_size=1333, sample_style='choice'), RandomFlip()]
+[09/18 00:24:01 d2.data.build]: Using training sampler TrainingSampler
+[09/18 00:24:01 d2.data.common]: Serializing 100 elements to byte tensors and concatenating them all ...
+[09/18 00:24:01 d2.data.common]: Serialized dataset takes 0.03 MiB
+Traceback (most recent call last):
+  File "main.py", line 53, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 26, in main
+    trainer = Trainer(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 396, in __init__
+    self.register_hooks(self.build_hooks())
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 463, in build_hooks
+    ret.append(hooks.PeriodicWriter(self.build_writers(), period=20))
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 475, in build_writers
+    return default_writers(self.cfg.OUTPUT_DIR, self.max_iter)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 248, in default_writers
+    TensorboardXWriter(output_dir),
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/utils/events.py", line 145, in __init__
+    from torch.utils.tensorboard import SummaryWriter
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/utils/tensorboard/__init__.py", line 4, in <module>
+    LooseVersion = distutils.version.LooseVersion
+AttributeError: module 'distutils' has no attribute 'version'
+
+[09/18 00:24:19 detectron2]: Rank of current process: 0. World size: 4
+[09/18 00:24:19 detectron2]: Full config saved to checkpoints/voc/1726615376/fsod1/10shot/seed1/config.yaml
+[09/18 00:24:21 d2.data.build]: Removed 0 images with no usable annotations. 200 images left.
+[09/18 00:24:21 d2.data.dataset_mapper]: [DatasetMapper] Augmentations used in training: [ResizeShortestEdge(short_edge_length=..., max_size=1333, sample_style='choice'), RandomFlip()]
+[09/18 00:24:21 d2.data.build]: Using training sampler TrainingSampler
+[09/18 00:24:22 d2.data.common]: Serializing 200 elements to byte tensors and concatenating them all ...
+[09/18 00:24:22 d2.data.common]: Serialized dataset takes 0.05 MiB
+Traceback (most recent call last):
+  File "main.py", line 53, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 26, in main
+    trainer = Trainer(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 396, in __init__
+    self.register_hooks(self.build_hooks())
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 463, in build_hooks
+    ret.append(hooks.PeriodicWriter(self.build_writers(), period=20))
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 475, in build_writers
+    return default_writers(self.cfg.OUTPUT_DIR, self.max_iter)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 248, in default_writers
+    TensorboardXWriter(output_dir),
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/utils/events.py", line 145, in __init__
+    from torch.utils.tensorboard import SummaryWriter
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/utils/tensorboard/__init__.py", line 4, in <module>
+    LooseVersion = distutils.version.LooseVersion
+AttributeError: module 'distutils' has no attribute 'version'
+

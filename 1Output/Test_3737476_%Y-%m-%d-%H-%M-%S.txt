@@ -1,0 +1,201 @@
+save to: /users/acr23hk/paper/fsod-dc/dataset/check/voc/1726356812/base1/model_final-fsod.pth
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+Traceback (most recent call last):
+  File "main.py", line 51, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 16, in main
+    cfg = setup(args)
+  File "/users/acr23hk/paper/fsod-dc/src/utils/setup.py", line 25, in setup
+    cfg.merge_from_file(args.config_file)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 69, in merge_from_file
+    self.merge_from_other_cfg(loaded_cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/config.py", line 132, in merge_from_other_cfg
+    return super().merge_from_other_cfg(cfg_other)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 217, in merge_from_other_cfg
+    _merge_a_into_b(cfg_other, self, self, [])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 478, in _merge_a_into_b
+    _merge_a_into_b(v, b[k], root, key_list + [k])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 478, in _merge_a_into_b
+    _merge_a_into_b(v, b[k], root, key_list + [k])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 491, in _merge_a_into_b
+    raise KeyError("Non-existent config key: {}".format(full_key))
+KeyError: 'Non-existent config key: MODEL.ROI_HEADS.TEACHER_WEIGHTS'
+
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+Traceback (most recent call last):
+  File "main.py", line 51, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 16, in main
+    cfg = setup(args)
+  File "/users/acr23hk/paper/fsod-dc/src/utils/setup.py", line 25, in setup
+    cfg.merge_from_file(args.config_file)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 69, in merge_from_file
+    self.merge_from_other_cfg(loaded_cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/config.py", line 132, in merge_from_other_cfg
+    return super().merge_from_other_cfg(cfg_other)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 217, in merge_from_other_cfg
+    _merge_a_into_b(cfg_other, self, self, [])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 478, in _merge_a_into_b
+    _merge_a_into_b(v, b[k], root, key_list + [k])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 478, in _merge_a_into_b
+    _merge_a_into_b(v, b[k], root, key_list + [k])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 491, in _merge_a_into_b
+    raise KeyError("Non-existent config key: {}".format(full_key))
+KeyError: 'Non-existent config key: MODEL.ROI_HEADS.TEACHER_WEIGHTS'
+
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+Traceback (most recent call last):
+  File "main.py", line 51, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 16, in main
+    cfg = setup(args)
+  File "/users/acr23hk/paper/fsod-dc/src/utils/setup.py", line 25, in setup
+    cfg.merge_from_file(args.config_file)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 69, in merge_from_file
+    self.merge_from_other_cfg(loaded_cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/config.py", line 132, in merge_from_other_cfg
+    return super().merge_from_other_cfg(cfg_other)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 217, in merge_from_other_cfg
+    _merge_a_into_b(cfg_other, self, self, [])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 478, in _merge_a_into_b
+    _merge_a_into_b(v, b[k], root, key_list + [k])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 478, in _merge_a_into_b
+    _merge_a_into_b(v, b[k], root, key_list + [k])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 491, in _merge_a_into_b
+    raise KeyError("Non-existent config key: {}".format(full_key))
+KeyError: 'Non-existent config key: MODEL.ROI_HEADS.TEACHER_WEIGHTS'
+
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+Traceback (most recent call last):
+  File "main.py", line 51, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 16, in main
+    cfg = setup(args)
+  File "/users/acr23hk/paper/fsod-dc/src/utils/setup.py", line 25, in setup
+    cfg.merge_from_file(args.config_file)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 69, in merge_from_file
+    self.merge_from_other_cfg(loaded_cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/config.py", line 132, in merge_from_other_cfg
+    return super().merge_from_other_cfg(cfg_other)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 217, in merge_from_other_cfg
+    _merge_a_into_b(cfg_other, self, self, [])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 478, in _merge_a_into_b
+    _merge_a_into_b(v, b[k], root, key_list + [k])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 478, in _merge_a_into_b
+    _merge_a_into_b(v, b[k], root, key_list + [k])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 491, in _merge_a_into_b
+    raise KeyError("Non-existent config key: {}".format(full_key))
+KeyError: 'Non-existent config key: MODEL.ROI_HEADS.TEACHER_WEIGHTS'
+
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+Traceback (most recent call last):
+  File "main.py", line 51, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 16, in main
+    cfg = setup(args)
+  File "/users/acr23hk/paper/fsod-dc/src/utils/setup.py", line 25, in setup
+    cfg.merge_from_file(args.config_file)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 69, in merge_from_file
+    self.merge_from_other_cfg(loaded_cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/config.py", line 132, in merge_from_other_cfg
+    return super().merge_from_other_cfg(cfg_other)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 217, in merge_from_other_cfg
+    _merge_a_into_b(cfg_other, self, self, [])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 478, in _merge_a_into_b
+    _merge_a_into_b(v, b[k], root, key_list + [k])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 478, in _merge_a_into_b
+    _merge_a_into_b(v, b[k], root, key_list + [k])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 491, in _merge_a_into_b
+    raise KeyError("Non-existent config key: {}".format(full_key))
+KeyError: 'Non-existent config key: MODEL.ROI_HEADS.TEACHER_WEIGHTS'
+
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/users/acr23hk/paper/fsod-dc/tools/display_results.py", line 189, in <module>
+    main(args)
+  File "/users/acr23hk/paper/fsod-dc/tools/display_results.py", line 128, in main
+    table = open(os.path.join(root, "results.txt"), "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoints/voc/1727077126/results.txt'

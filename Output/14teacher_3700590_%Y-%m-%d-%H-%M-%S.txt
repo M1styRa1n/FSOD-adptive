@@ -1,0 +1,151 @@
+save to: /users/acr23hk/paper/fsod-dc/dataset/check/voc/1726356812/base1/model_final-fsod.pth
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+[09/17 16:35:43 detectron2]: Rank of current process: 0. World size: 4
+[09/17 16:35:43 detectron2]: Full config saved to checkpoints/voc/1726587331/fsod1/1shot/seed1/config.yaml
+[09/17 16:35:44 fvcore.common.checkpoint]: [Checkpointer] Loading from /users/acr23hk/paper/fsod-dc/checkpoints/voc/1726573001/fsod1/5shot/seed1/model_final.pth ...
+WARNING [09/17 16:35:44 fvcore.common.checkpoint]: The checkpoint state_dict contains keys that are not used by the model:
+  roi_heads.box_predictor.fsup
+  roi_heads.box_predictor.fc.weight
+Traceback (most recent call last):
+  File "main.py", line 48, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 2 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 39, in main
+    trainer = Trainer(cfg, teacher_model=teacher_model)  # ???????? Trainer
+TypeError: __init__() got an unexpected keyword argument 'teacher_model'
+
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+[09/17 16:35:53 detectron2]: Rank of current process: 0. World size: 4
+[09/17 16:35:53 detectron2]: Full config saved to checkpoints/voc/1726587331/fsod1/2shot/seed1/config.yaml
+[09/17 16:35:54 fvcore.common.checkpoint]: [Checkpointer] Loading from /users/acr23hk/paper/fsod-dc/checkpoints/voc/1726573001/fsod1/5shot/seed1/model_final.pth ...
+WARNING [09/17 16:35:54 fvcore.common.checkpoint]: The checkpoint state_dict contains keys that are not used by the model:
+  roi_heads.box_predictor.fsup
+  roi_heads.box_predictor.fc.weight
+Traceback (most recent call last):
+  File "main.py", line 48, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 39, in main
+    trainer = Trainer(cfg, teacher_model=teacher_model)  # ???????? Trainer
+TypeError: __init__() got an unexpected keyword argument 'teacher_model'
+
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+[09/17 16:36:05 detectron2]: Rank of current process: 0. World size: 4
+[09/17 16:36:05 detectron2]: Full config saved to checkpoints/voc/1726587331/fsod1/3shot/seed1/config.yaml
+[09/17 16:36:06 fvcore.common.checkpoint]: [Checkpointer] Loading from /users/acr23hk/paper/fsod-dc/checkpoints/voc/1726573001/fsod1/5shot/seed1/model_final.pth ...
+WARNING [09/17 16:36:06 fvcore.common.checkpoint]: The checkpoint state_dict contains keys that are not used by the model:
+  roi_heads.box_predictor.fsup
+  roi_heads.box_predictor.fc.weight
+Traceback (most recent call last):
+  File "main.py", line 48, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 39, in main
+    trainer = Trainer(cfg, teacher_model=teacher_model)  # ???????? Trainer
+TypeError: __init__() got an unexpected keyword argument 'teacher_model'
+
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+[09/17 16:36:16 detectron2]: Rank of current process: 0. World size: 4
+[09/17 16:36:16 detectron2]: Full config saved to checkpoints/voc/1726587331/fsod1/5shot/seed1/config.yaml
+[09/17 16:36:17 fvcore.common.checkpoint]: [Checkpointer] Loading from /users/acr23hk/paper/fsod-dc/checkpoints/voc/1726573001/fsod1/5shot/seed1/model_final.pth ...
+WARNING [09/17 16:36:17 fvcore.common.checkpoint]: The checkpoint state_dict contains keys that are not used by the model:
+  roi_heads.box_predictor.fsup
+  roi_heads.box_predictor.fc.weight
+Traceback (most recent call last):
+  File "main.py", line 48, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 3 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 39, in main
+    trainer = Trainer(cfg, teacher_model=teacher_model)  # ???????? Trainer
+TypeError: __init__() got an unexpected keyword argument 'teacher_model'
+
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+[09/17 16:36:26 detectron2]: Rank of current process: 0. World size: 4
+[09/17 16:36:26 detectron2]: Full config saved to checkpoints/voc/1726587331/fsod1/10shot/seed1/config.yaml
+[09/17 16:36:27 fvcore.common.checkpoint]: [Checkpointer] Loading from /users/acr23hk/paper/fsod-dc/checkpoints/voc/1726573001/fsod1/5shot/seed1/model_final.pth ...
+WARNING [09/17 16:36:27 fvcore.common.checkpoint]: The checkpoint state_dict contains keys that are not used by the model:
+  roi_heads.box_predictor.fsup
+  roi_heads.box_predictor.fc.weight
+Traceback (most recent call last):
+  File "main.py", line 48, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 39, in main
+    trainer = Trainer(cfg, teacher_model=teacher_model)  # ???????? Trainer
+TypeError: __init__() got an unexpected keyword argument 'teacher_model'
+

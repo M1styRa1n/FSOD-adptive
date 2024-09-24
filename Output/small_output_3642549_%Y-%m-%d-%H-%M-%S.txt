@@ -1,0 +1,201 @@
+True
+/var/spool/slurmd.spool/job3642549/slurm_script: line 22: export: `“./dataset”': not a valid identifier
+[09/08 00:17:07 detectron2]: Rank of current process: 0. World size: 1
+[09/08 00:17:07 detectron2]: Full config saved to checkpoints/coco/1725751026/base/config.yaml
+[09/08 00:17:08 detectron2]: [Refine] n = 24, Î± = 0.1
+Traceback (most recent call last):
+  File "main.py", line 31, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 82, in launch
+    main_func(*args)
+  File "main.py", line 24, in main
+    trainer = Trainer(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 378, in __init__
+    data_loader = self.build_train_loader(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 538, in build_train_loader
+    return build_detection_train_loader(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 207, in wrapped
+    explicit_args = _get_args_from_config(from_config, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 245, in _get_args_from_config
+    ret = from_config_func(*args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/data/build.py", line 337, in _train_loader_from_config
+    dataset = get_detection_dataset_dicts(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/data/build.py", line 240, in get_detection_dataset_dicts
+    dataset_dicts = [DatasetCatalog.get(dataset_name) for dataset_name in names]
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/data/build.py", line 240, in <listcomp>
+    dataset_dicts = [DatasetCatalog.get(dataset_name) for dataset_name in names]
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/data/catalog.py", line 58, in get
+    return f()
+  File "/users/acr23hk/paper/fsod-dc/src/data/datasets/fs_coco.py", line 155, in <lambda>
+    name, lambda: _load_coco_json(metadata, root, split, shot, seed)
+  File "/users/acr23hk/paper/fsod-dc/src/data/datasets/fs_coco.py", line 90, in _load_coco_json
+    coco_api = COCO(annofile)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/pycocotools/coco.py", line 81, in __init__
+    with open(annotation_file, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'cocosplit/datasplit/trainvalno5k.json'
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/users/acr23hk/paper/fsod-dc/tools/ckpt_surgery.py", line 128, in <module>
+    main(args)
+  File "/users/acr23hk/paper/fsod-dc/tools/ckpt_surgery.py", line 83, in main
+    sd = torch.load(inp_path, map_location="cpu")
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/users/acr23hk/paper/fsod-dc/checkpoints/coco/1725751026/base/model_final.pth'
+[09/08 00:17:13 detectron2]: Rank of current process: 0. World size: 1
+[09/08 00:17:13 detectron2]: Full config saved to checkpoints/coco/1725751026/fsod/1shot/seed0/config.yaml
+[09/08 00:17:14 fvcore.common.checkpoint]: [Checkpointer] Loading from ./pretrain/R-101.pkl ...
+Traceback (most recent call last):
+  File "main.py", line 31, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 82, in launch
+    main_func(*args)
+  File "main.py", line 24, in main
+    trainer = Trainer(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 376, in __init__
+    model = self.build_model(cfg)
+  File "/users/acr23hk/paper/fsod-dc/src/engine/trainer.py", line 33, in build_model
+    model = build_model(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/modeling/meta_arch/build.py", line 22, in build_model
+    model = META_ARCH_REGISTRY.get(meta_arch)(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 189, in wrapped
+    explicit_args = _get_args_from_config(from_config_func, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 245, in _get_args_from_config
+    ret = from_config_func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 25, in from_config
+    ret = super().from_config(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/modeling/meta_arch/rcnn.py", line 76, in from_config
+    "roi_heads": build_roi_heads(cfg, backbone.output_shape()),
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/modeling/roi_heads/roi_heads.py", line 43, in build_roi_heads
+    return ROI_HEADS_REGISTRY.get(name)(cfg, input_shape)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 189, in wrapped
+    explicit_args = _get_args_from_config(from_config_func, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 245, in _get_args_from_config
+    ret = from_config_func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/roi_heads.py", line 74, in from_config
+    ret["box_predictor"] = (
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 189, in wrapped
+    explicit_args = _get_args_from_config(from_config_func, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 245, in _get_args_from_config
+    ret = from_config_func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/calibrate.py", line 124, in from_config
+    supp_feats, mask = extract_support_rois(pkl.dumps(cfg))
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/calibrate.py", line 37, in extract_support_rois
+    DetectionCheckpointer(backbone).resume_or_load("./pretrain/R-101.pkl")
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/checkpoint.py", line 227, in resume_or_load
+    return self.load(path, checkpointables=[])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/checkpoint/detection_checkpoint.py", line 52, in load
+    ret = super().load(path, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/checkpoint.py", line 155, in load
+    checkpoint = self._load_file(path)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/checkpoint/detection_checkpoint.py", line 62, in _load_file
+    data = pickle.load(f, encoding="latin1")
+_pickle.UnpicklingError: A load persistent id instruction was encountered,
+but no persistent_load function was specified.
+[09/08 00:17:15 detectron2]: Rank of current process: 0. World size: 1
+[09/08 00:17:15 detectron2]: Full config saved to checkpoints/coco/1725751026/fsod/1shot/seed1/config.yaml
+[09/08 00:17:16 fvcore.common.checkpoint]: [Checkpointer] Loading from ./pretrain/R-101.pkl ...
+Traceback (most recent call last):
+  File "main.py", line 31, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 82, in launch
+    main_func(*args)
+  File "main.py", line 24, in main
+    trainer = Trainer(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 376, in __init__
+    model = self.build_model(cfg)
+  File "/users/acr23hk/paper/fsod-dc/src/engine/trainer.py", line 33, in build_model
+    model = build_model(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/modeling/meta_arch/build.py", line 22, in build_model
+    model = META_ARCH_REGISTRY.get(meta_arch)(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 189, in wrapped
+    explicit_args = _get_args_from_config(from_config_func, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 245, in _get_args_from_config
+    ret = from_config_func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 25, in from_config
+    ret = super().from_config(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/modeling/meta_arch/rcnn.py", line 76, in from_config
+    "roi_heads": build_roi_heads(cfg, backbone.output_shape()),
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/modeling/roi_heads/roi_heads.py", line 43, in build_roi_heads
+    return ROI_HEADS_REGISTRY.get(name)(cfg, input_shape)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 189, in wrapped
+    explicit_args = _get_args_from_config(from_config_func, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 245, in _get_args_from_config
+    ret = from_config_func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/roi_heads.py", line 74, in from_config
+    ret["box_predictor"] = (
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 189, in wrapped
+    explicit_args = _get_args_from_config(from_config_func, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 245, in _get_args_from_config
+    ret = from_config_func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/calibrate.py", line 124, in from_config
+    supp_feats, mask = extract_support_rois(pkl.dumps(cfg))
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/calibrate.py", line 37, in extract_support_rois
+    DetectionCheckpointer(backbone).resume_or_load("./pretrain/R-101.pkl")
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/checkpoint.py", line 227, in resume_or_load
+    return self.load(path, checkpointables=[])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/checkpoint/detection_checkpoint.py", line 52, in load
+    ret = super().load(path, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/checkpoint.py", line 155, in load
+    checkpoint = self._load_file(path)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/checkpoint/detection_checkpoint.py", line 62, in _load_file
+    data = pickle.load(f, encoding="latin1")
+_pickle.UnpicklingError: A load persistent id instruction was encountered,
+but no persistent_load function was specified.
+[09/08 00:17:17 detectron2]: Rank of current process: 0. World size: 1
+[09/08 00:17:17 detectron2]: Full config saved to checkpoints/coco/1725751026/fsod/1shot/seed2/config.yaml
+[09/08 00:17:18 fvcore.common.checkpoint]: [Checkpointer] Loading from ./pretrain/R-101.pkl ...
+Traceback (most recent call last):
+  File "main.py", line 31, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 82, in launch
+    main_func(*args)
+  File "main.py", line 24, in main
+    trainer = Trainer(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 376, in __init__
+    model = self.build_model(cfg)
+  File "/users/acr23hk/paper/fsod-dc/src/engine/trainer.py", line 33, in build_model
+    model = build_model(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/modeling/meta_arch/build.py", line 22, in build_model
+    model = META_ARCH_REGISTRY.get(meta_arch)(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 189, in wrapped
+    explicit_args = _get_args_from_config(from_config_func, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 245, in _get_args_from_config
+    ret = from_config_func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 25, in from_config
+    ret = super().from_config(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/modeling/meta_arch/rcnn.py", line 76, in from_config
+    "roi_heads": build_roi_heads(cfg, backbone.output_shape()),
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/modeling/roi_heads/roi_heads.py", line 43, in build_roi_heads
+    return ROI_HEADS_REGISTRY.get(name)(cfg, input_shape)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 189, in wrapped
+    explicit_args = _get_args_from_config(from_config_func, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 245, in _get_args_from_config
+    ret = from_config_func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/roi_heads.py", line 74, in from_config
+    ret["box_predictor"] = (
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 189, in wrapped
+    explicit_args = _get_args_from_config(from_config_func, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 245, in _get_args_from_config
+    ret = from_config_func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/calibrate.py", line 124, in from_config
+    supp_feats, mask = extract_support_rois(pkl.dumps(cfg))
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/calibrate.py", line 37, in extract_support_rois
+    DetectionCheckpointer(backbone).resume_or_load("./pretrain/R-101.pkl")
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/checkpoint.py", line 227, in resume_or_load
+    return self.load(path, checkpointables=[])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/checkpoint/detection_checkpoint.py", line 52, in load
+    ret = super().load(path, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/checkpoint.py", line 155, in load
+    checkpoint = self._load_file(path)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/checkpoint/detection_checkpoint.py", line 62, in _load_file
+    data = pickle.load(f, encoding="latin1")
+_pickle.UnpicklingError: A load persistent id instruction was encountered,
+but no persistent_load function was specified.

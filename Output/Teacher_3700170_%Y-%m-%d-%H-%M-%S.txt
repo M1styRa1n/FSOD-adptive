@@ -1,0 +1,17 @@
+save to: /users/acr23hk/paper/fsod-dc/dataset/check/voc/1726356812/base1/model_final-fsod.pth
+Traceback (most recent call last):
+  File "continue_main.py", line 8, in <module>
+    from src.engine import Trainer_teacher
+  File "/users/acr23hk/paper/fsod-dc/src/engine/__init__.py", line 2, in <module>
+    from .trainer import Trainer_teacher
+ImportError: cannot import name 'Trainer_teacher' from 'src.engine.trainer' (/users/acr23hk/paper/fsod-dc/src/engine/trainer.py)
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/users/acr23hk/paper/fsod-dc/tools/display_results.py", line 189, in <module>
+    main(args)
+  File "/users/acr23hk/paper/fsod-dc/tools/display_results.py", line 128, in main
+    table = open(os.path.join(root, "results.txt"), "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoints/voc/1726580117/results.txt'

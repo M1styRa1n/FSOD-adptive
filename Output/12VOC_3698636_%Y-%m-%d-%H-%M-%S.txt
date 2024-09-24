@@ -1,0 +1,889 @@
+save to: /users/acr23hk/paper/fsod-dc/dataset/check/voc/1726356812/base1/model_final-fsod.pth
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+[09/17 12:15:41 detectron2]: Rank of current process: 0. World size: 4
+[09/17 12:15:41 detectron2]: Full config saved to checkpoints/voc/1726571731/fsod1/1shot/seed1/config.yaml
+[09/17 12:15:42 fvcore.common.checkpoint]: [Checkpointer] Loading from ./pretrain/R-101.pkl ...
+[09/17 12:15:42 fvcore.common.checkpoint]: Reading a file from 'torchvision'
+[09/17 12:15:47 detectron2]: Loss: 0.0000
+[09/17 12:15:47 detectron2]: [CLS] Use dropout: p = 0.8
+[09/17 12:15:47 d2.data.build]: Removed 0 images with no usable annotations. 20 images left.
+[09/17 12:15:47 d2.data.dataset_mapper]: [DatasetMapper] Augmentations used in training: [ResizeShortestEdge(short_edge_length=..., max_size=1333, sample_style='choice'), RandomFlip()]
+[09/17 12:15:47 d2.data.build]: Using training sampler TrainingSampler
+[09/17 12:15:47 d2.data.common]: Serializing 20 elements to byte tensors and concatenating them all ...
+[09/17 12:15:47 d2.data.common]: Serialized dataset takes 0.01 MiB
+[09/17 12:15:48 fvcore.common.checkpoint]: [Checkpointer] Loading from dataset/check/voc/1726356812/base1/model_final-fsod.pth ...
+WARNING [09/17 12:15:48 fvcore.common.checkpoint]: Some model parameters or buffers are not found in the checkpoint:
+roi_heads.box_predictor.fc.weight
+roi_heads.box_predictor.fsup
+[09/17 12:15:48 d2.engine.train_loop]: Starting training from iteration 0
+ERROR [09/17 12:15:58 d2.engine.train_loop]: Exception during training:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 149, in train
+    self.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 273, in run_step
+    loss_dict = self.model(data)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 886, in forward
+    output = self.module(*inputs[0], **kwargs[0])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 54, in forward
+    self.refine.update_centroids(features["res4"], proposals)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 68, in update_centroids
+    confidence = self.calculate_confidence(features, proposals)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 101, in calculate_confidence
+    objectness_logits = torch.tensor([p.objectness_logits for p in proposals]).cuda()
+ValueError: only one element tensors can be converted to Python scalars
+[09/17 12:15:58 d2.engine.hooks]: Total training time: 0:00:10 (0:00:00 on hooks)
+[09/17 12:15:58 d2.utils.events]:  iter: 0    lr: N/A  max_mem: 3854M
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Process SpawnProcess-4:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 30, in main
+    return trainer.train()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 484, in train
+    super().train(self.start_iter, self.max_iter)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 149, in train
+    self.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 273, in run_step
+    loss_dict = self.model(data)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 886, in forward
+    output = self.module(*inputs[0], **kwargs[0])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 54, in forward
+    self.refine.update_centroids(features["res4"], proposals)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 68, in update_centroids
+    confidence = self.calculate_confidence(features, proposals)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 101, in calculate_confidence
+    objectness_logits = torch.tensor([p.objectness_logits for p in proposals]).cuda()
+ValueError: only one element tensors can be converted to Python scalars
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 66, in _wrap
+    sys.exit(1)
+SystemExit: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/util.py", line 357, in _exit_function
+    p.join()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/popen_fork.py", line 47, in wait
+    return self.poll(os.WNOHANG if timeout == 0.0 else 0)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/popen_fork.py", line 27, in poll
+    pid, sts = os.waitpid(self.pid, flag)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 11307) is killed by signal: Terminated. 
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Process SpawnProcess-1:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 30, in main
+    return trainer.train()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 484, in train
+    super().train(self.start_iter, self.max_iter)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 149, in train
+    self.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 273, in run_step
+    loss_dict = self.model(data)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 886, in forward
+    output = self.module(*inputs[0], **kwargs[0])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 54, in forward
+    self.refine.update_centroids(features["res4"], proposals)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 68, in update_centroids
+    confidence = self.calculate_confidence(features, proposals)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 101, in calculate_confidence
+    objectness_logits = torch.tensor([p.objectness_logits for p in proposals]).cuda()
+ValueError: only one element tensors can be converted to Python scalars
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 66, in _wrap
+    sys.exit(1)
+SystemExit: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/util.py", line 357, in _exit_function
+    p.join()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/popen_fork.py", line 47, in wait
+    return self.poll(os.WNOHANG if timeout == 0.0 else 0)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/popen_fork.py", line 27, in poll
+    pid, sts = os.waitpid(self.pid, flag)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 11322) is killed by signal: Terminated. 
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Process SpawnProcess-2:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 30, in main
+    return trainer.train()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 484, in train
+    super().train(self.start_iter, self.max_iter)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 149, in train
+    self.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 273, in run_step
+    loss_dict = self.model(data)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 886, in forward
+    output = self.module(*inputs[0], **kwargs[0])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 54, in forward
+    self.refine.update_centroids(features["res4"], proposals)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 68, in update_centroids
+    confidence = self.calculate_confidence(features, proposals)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 101, in calculate_confidence
+    objectness_logits = torch.tensor([p.objectness_logits for p in proposals]).cuda()
+ValueError: only one element tensors can be converted to Python scalars
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 66, in _wrap
+    sys.exit(1)
+SystemExit: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/util.py", line 357, in _exit_function
+    p.join()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/popen_fork.py", line 47, in wait
+    return self.poll(os.WNOHANG if timeout == 0.0 else 0)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/popen_fork.py", line 27, in poll
+    pid, sts = os.waitpid(self.pid, flag)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 11324) is killed by signal: Terminated. 
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Process SpawnProcess-3:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 30, in main
+    return trainer.train()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 484, in train
+    super().train(self.start_iter, self.max_iter)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 149, in train
+    self.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 273, in run_step
+    loss_dict = self.model(data)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 886, in forward
+    output = self.module(*inputs[0], **kwargs[0])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 54, in forward
+    self.refine.update_centroids(features["res4"], proposals)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 68, in update_centroids
+    confidence = self.calculate_confidence(features, proposals)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 101, in calculate_confidence
+    objectness_logits = torch.tensor([p.objectness_logits for p in proposals]).cuda()
+ValueError: only one element tensors can be converted to Python scalars
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 66, in _wrap
+    sys.exit(1)
+SystemExit: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/util.py", line 357, in _exit_function
+    p.join()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/popen_fork.py", line 47, in wait
+    return self.poll(os.WNOHANG if timeout == 0.0 else 0)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/popen_fork.py", line 27, in poll
+    pid, sts = os.waitpid(self.pid, flag)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 11309) is killed by signal: Terminated. 
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 30, in main
+    return trainer.train()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 484, in train
+    super().train(self.start_iter, self.max_iter)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 149, in train
+    self.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 273, in run_step
+    loss_dict = self.model(data)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 886, in forward
+    output = self.module(*inputs[0], **kwargs[0])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 54, in forward
+    self.refine.update_centroids(features["res4"], proposals)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 68, in update_centroids
+    confidence = self.calculate_confidence(features, proposals)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 101, in calculate_confidence
+    objectness_logits = torch.tensor([p.objectness_logits for p in proposals]).cuda()
+ValueError: only one element tensors can be converted to Python scalars
+
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+[09/17 12:16:07 detectron2]: Rank of current process: 0. World size: 4
+[09/17 12:16:07 detectron2]: Full config saved to checkpoints/voc/1726571731/fsod1/2shot/seed1/config.yaml
+[09/17 12:16:08 fvcore.common.checkpoint]: [Checkpointer] Loading from ./pretrain/R-101.pkl ...
+[09/17 12:16:08 fvcore.common.checkpoint]: Reading a file from 'torchvision'
+[09/17 12:16:15 detectron2]: Loss: 0.0002
+[09/17 12:16:15 detectron2]: [CLS] Use dropout: p = 0.8
+[09/17 12:16:15 d2.data.build]: Removed 0 images with no usable annotations. 40 images left.
+[09/17 12:16:15 d2.data.dataset_mapper]: [DatasetMapper] Augmentations used in training: [ResizeShortestEdge(short_edge_length=..., max_size=1333, sample_style='choice'), RandomFlip()]
+[09/17 12:16:15 d2.data.build]: Using training sampler TrainingSampler
+[09/17 12:16:15 d2.data.common]: Serializing 40 elements to byte tensors and concatenating them all ...
+[09/17 12:16:15 d2.data.common]: Serialized dataset takes 0.01 MiB
+[09/17 12:16:15 fvcore.common.checkpoint]: [Checkpointer] Loading from dataset/check/voc/1726356812/base1/model_final-fsod.pth ...
+WARNING [09/17 12:16:15 fvcore.common.checkpoint]: Some model parameters or buffers are not found in the checkpoint:
+roi_heads.box_predictor.fc.weight
+roi_heads.box_predictor.fsup
+[09/17 12:16:15 d2.engine.train_loop]: Starting training from iteration 0
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Process SpawnProcess-3:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 30, in main
+    return trainer.train()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 484, in train
+    super().train(self.start_iter, self.max_iter)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 149, in train
+    self.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 273, in run_step
+    loss_dict = self.model(data)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 886, in forward
+    output = self.module(*inputs[0], **kwargs[0])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 54, in forward
+    self.refine.update_centroids(features["res4"], proposals)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 68, in update_centroids
+    confidence = self.calculate_confidence(features, proposals)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 101, in calculate_confidence
+    objectness_logits = torch.tensor([p.objectness_logits for p in proposals]).cuda()
+ValueError: only one element tensors can be converted to Python scalars
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 66, in _wrap
+    sys.exit(1)
+SystemExit: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/util.py", line 357, in _exit_function
+    p.join()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/popen_fork.py", line 47, in wait
+    return self.poll(os.WNOHANG if timeout == 0.0 else 0)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/popen_fork.py", line 27, in poll
+    pid, sts = os.waitpid(self.pid, flag)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 13388) is killed by signal: Terminated. 
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Process SpawnProcess-2:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 30, in main
+    return trainer.train()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 484, in train
+    super().train(self.start_iter, self.max_iter)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 149, in train
+    self.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 273, in run_step
+    loss_dict = self.model(data)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 886, in forward
+    output = self.module(*inputs[0], **kwargs[0])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 54, in forward
+    self.refine.update_centroids(features["res4"], proposals)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 68, in update_centroids
+    confidence = self.calculate_confidence(features, proposals)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 101, in calculate_confidence
+    objectness_logits = torch.tensor([p.objectness_logits for p in proposals]).cuda()
+ValueError: only one element tensors can be converted to Python scalars
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 66, in _wrap
+    sys.exit(1)
+SystemExit: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/util.py", line 357, in _exit_function
+    p.join()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/popen_fork.py", line 47, in wait
+    return self.poll(os.WNOHANG if timeout == 0.0 else 0)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/popen_fork.py", line 27, in poll
+    pid, sts = os.waitpid(self.pid, flag)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 13420) is killed by signal: Terminated. 
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Process SpawnProcess-4:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 30, in main
+    return trainer.train()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 484, in train
+    super().train(self.start_iter, self.max_iter)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 149, in train
+    self.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 273, in run_step
+    loss_dict = self.model(data)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 886, in forward
+    output = self.module(*inputs[0], **kwargs[0])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 54, in forward
+    self.refine.update_centroids(features["res4"], proposals)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 68, in update_centroids
+    confidence = self.calculate_confidence(features, proposals)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 101, in calculate_confidence
+    objectness_logits = torch.tensor([p.objectness_logits for p in proposals]).cuda()
+ValueError: only one element tensors can be converted to Python scalars
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 66, in _wrap
+    sys.exit(1)
+SystemExit: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/util.py", line 357, in _exit_function
+    p.join()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/popen_fork.py", line 47, in wait
+    return self.poll(os.WNOHANG if timeout == 0.0 else 0)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/multiprocessing/popen_fork.py", line 27, in poll
+    pid, sts = os.waitpid(self.pid, flag)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 13387) is killed by signal: Terminated. 
+ERROR [09/17 12:16:26 d2.engine.train_loop]: Exception during training:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 149, in train
+    self.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 273, in run_step
+    loss_dict = self.model(data)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 886, in forward
+    output = self.module(*inputs[0], **kwargs[0])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 54, in forward
+    self.refine.update_centroids(features["res4"], proposals)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 68, in update_centroids
+    confidence = self.calculate_confidence(features, proposals)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 101, in calculate_confidence
+    objectness_logits = torch.tensor([p.objectness_logits for p in proposals]).cuda()
+ValueError: only one element tensors can be converted to Python scalars
+[09/17 12:16:26 d2.engine.hooks]: Total training time: 0:00:10 (0:00:00 on hooks)
+[09/17 12:16:26 d2.utils.events]:  iter: 0    lr: N/A  max_mem: 4142M
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 1 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 30, in main
+    return trainer.train()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 484, in train
+    super().train(self.start_iter, self.max_iter)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 149, in train
+    self.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 273, in run_step
+    loss_dict = self.model(data)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 886, in forward
+    output = self.module(*inputs[0], **kwargs[0])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 54, in forward
+    self.refine.update_centroids(features["res4"], proposals)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 68, in update_centroids
+    confidence = self.calculate_confidence(features, proposals)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 101, in calculate_confidence
+    objectness_logits = torch.tensor([p.objectness_logits for p in proposals]).cuda()
+ValueError: only one element tensors can be converted to Python scalars
+
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+[09/17 12:16:35 detectron2]: Rank of current process: 0. World size: 4
+[09/17 12:16:35 detectron2]: Full config saved to checkpoints/voc/1726571731/fsod1/3shot/seed1/config.yaml
+[09/17 12:16:37 fvcore.common.checkpoint]: [Checkpointer] Loading from ./pretrain/R-101.pkl ...
+[09/17 12:16:37 fvcore.common.checkpoint]: Reading a file from 'torchvision'
+[09/17 12:16:44 detectron2]: Loss: 0.0003
+[09/17 12:16:44 detectron2]: [CLS] Use dropout: p = 0.8
+[09/17 12:16:44 d2.data.build]: Removed 0 images with no usable annotations. 60 images left.
+[09/17 12:16:44 d2.data.dataset_mapper]: [DatasetMapper] Augmentations used in training: [ResizeShortestEdge(short_edge_length=..., max_size=1333, sample_style='choice'), RandomFlip()]
+[09/17 12:16:44 d2.data.build]: Using training sampler TrainingSampler
+[09/17 12:16:44 d2.data.common]: Serializing 60 elements to byte tensors and concatenating them all ...
+[09/17 12:16:44 d2.data.common]: Serialized dataset takes 0.02 MiB
+[09/17 12:16:44 fvcore.common.checkpoint]: [Checkpointer] Loading from dataset/check/voc/1726356812/base1/model_final-fsod.pth ...
+WARNING [09/17 12:16:44 fvcore.common.checkpoint]: Some model parameters or buffers are not found in the checkpoint:
+roi_heads.box_predictor.fc.weight
+roi_heads.box_predictor.fsup
+[09/17 12:16:44 d2.engine.train_loop]: Starting training from iteration 0
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ERROR [09/17 12:16:58 d2.engine.train_loop]: Exception during training:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 149, in train
+    self.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 273, in run_step
+    loss_dict = self.model(data)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 886, in forward
+    output = self.module(*inputs[0], **kwargs[0])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 54, in forward
+    self.refine.update_centroids(features["res4"], proposals)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 68, in update_centroids
+    confidence = self.calculate_confidence(features, proposals)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 101, in calculate_confidence
+    objectness_logits = torch.tensor([p.objectness_logits for p in proposals]).cuda()
+ValueError: only one element tensors can be converted to Python scalars
+[09/17 12:16:58 d2.engine.hooks]: Total training time: 0:00:13 (0:00:00 on hooks)
+[09/17 12:16:58 d2.utils.events]:  iter: 0    lr: N/A  max_mem: 4372M
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 2 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 30, in main
+    return trainer.train()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 484, in train
+    super().train(self.start_iter, self.max_iter)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 149, in train
+    self.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 273, in run_step
+    loss_dict = self.model(data)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 886, in forward
+    output = self.module(*inputs[0], **kwargs[0])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 54, in forward
+    self.refine.update_centroids(features["res4"], proposals)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 68, in update_centroids
+    confidence = self.calculate_confidence(features, proposals)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 101, in calculate_confidence
+    objectness_logits = torch.tensor([p.objectness_logits for p in proposals]).cuda()
+ValueError: only one element tensors can be converted to Python scalars
+
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+[09/17 12:17:06 detectron2]: Rank of current process: 0. World size: 4
+[09/17 12:17:06 detectron2]: Full config saved to checkpoints/voc/1726571731/fsod1/5shot/seed1/config.yaml
+[09/17 12:17:07 fvcore.common.checkpoint]: [Checkpointer] Loading from ./pretrain/R-101.pkl ...
+[09/17 12:17:08 fvcore.common.checkpoint]: Reading a file from 'torchvision'
+[09/17 12:17:17 detectron2]: Loss: 0.0005
+[09/17 12:17:17 detectron2]: [CLS] Use dropout: p = 0.8
+[09/17 12:17:17 d2.data.build]: Removed 0 images with no usable annotations. 100 images left.
+[09/17 12:17:17 d2.data.dataset_mapper]: [DatasetMapper] Augmentations used in training: [ResizeShortestEdge(short_edge_length=..., max_size=1333, sample_style='choice'), RandomFlip()]
+[09/17 12:17:17 d2.data.build]: Using training sampler TrainingSampler
+[09/17 12:17:17 d2.data.common]: Serializing 100 elements to byte tensors and concatenating them all ...
+[09/17 12:17:17 d2.data.common]: Serialized dataset takes 0.03 MiB
+[09/17 12:17:17 fvcore.common.checkpoint]: [Checkpointer] Loading from dataset/check/voc/1726356812/base1/model_final-fsod.pth ...
+WARNING [09/17 12:17:17 fvcore.common.checkpoint]: Some model parameters or buffers are not found in the checkpoint:
+roi_heads.box_predictor.fc.weight
+roi_heads.box_predictor.fsup
+[09/17 12:17:17 d2.engine.train_loop]: Starting training from iteration 0
+ERROR [09/17 12:17:30 d2.engine.train_loop]: Exception during training:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 149, in train
+    self.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 273, in run_step
+    loss_dict = self.model(data)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 886, in forward
+    output = self.module(*inputs[0], **kwargs[0])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 54, in forward
+    self.refine.update_centroids(features["res4"], proposals)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 68, in update_centroids
+    confidence = self.calculate_confidence(features, proposals)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 101, in calculate_confidence
+    objectness_logits = torch.tensor([p.objectness_logits for p in proposals]).cuda()
+ValueError: only one element tensors can be converted to Python scalars
+[09/17 12:17:30 d2.engine.hooks]: Total training time: 0:00:12 (0:00:00 on hooks)
+[09/17 12:17:30 d2.utils.events]:  iter: 0    lr: N/A  max_mem: 4139M
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 30, in main
+    return trainer.train()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 484, in train
+    super().train(self.start_iter, self.max_iter)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 149, in train
+    self.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 273, in run_step
+    loss_dict = self.model(data)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 886, in forward
+    output = self.module(*inputs[0], **kwargs[0])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 54, in forward
+    self.refine.update_centroids(features["res4"], proposals)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 68, in update_centroids
+    confidence = self.calculate_confidence(features, proposals)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 101, in calculate_confidence
+    objectness_logits = torch.tensor([p.objectness_logits for p in proposals]).cuda()
+ValueError: only one element tensors can be converted to Python scalars
+
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+[09/17 12:17:40 detectron2]: Rank of current process: 0. World size: 4
+[09/17 12:17:40 detectron2]: Full config saved to checkpoints/voc/1726571731/fsod1/10shot/seed1/config.yaml
+[09/17 12:17:41 fvcore.common.checkpoint]: [Checkpointer] Loading from ./pretrain/R-101.pkl ...
+[09/17 12:17:41 fvcore.common.checkpoint]: Reading a file from 'torchvision'
+[09/17 12:17:56 detectron2]: Loss: 0.0010
+[09/17 12:17:56 detectron2]: [CLS] Use dropout: p = 0.8
+[09/17 12:17:56 d2.data.build]: Removed 0 images with no usable annotations. 200 images left.
+[09/17 12:17:56 d2.data.dataset_mapper]: [DatasetMapper] Augmentations used in training: [ResizeShortestEdge(short_edge_length=..., max_size=1333, sample_style='choice'), RandomFlip()]
+[09/17 12:17:56 d2.data.build]: Using training sampler TrainingSampler
+[09/17 12:17:57 d2.data.common]: Serializing 200 elements to byte tensors and concatenating them all ...
+[09/17 12:17:57 d2.data.common]: Serialized dataset takes 0.05 MiB
+[09/17 12:17:57 fvcore.common.checkpoint]: [Checkpointer] Loading from dataset/check/voc/1726356812/base1/model_final-fsod.pth ...
+WARNING [09/17 12:17:57 fvcore.common.checkpoint]: Some model parameters or buffers are not found in the checkpoint:
+roi_heads.box_predictor.fc.weight
+roi_heads.box_predictor.fsup
+[09/17 12:17:57 d2.engine.train_loop]: Starting training from iteration 0
+ERROR [09/17 12:18:11 d2.engine.train_loop]: Exception during training:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 149, in train
+    self.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 273, in run_step
+    loss_dict = self.model(data)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 886, in forward
+    output = self.module(*inputs[0], **kwargs[0])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 54, in forward
+    self.refine.update_centroids(features["res4"], proposals)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 68, in update_centroids
+    confidence = self.calculate_confidence(features, proposals)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 101, in calculate_confidence
+    objectness_logits = torch.tensor([p.objectness_logits for p in proposals]).cuda()
+ValueError: only one element tensors can be converted to Python scalars
+[09/17 12:18:11 d2.engine.hooks]: Total training time: 0:00:13 (0:00:00 on hooks)
+[09/17 12:18:11 d2.utils.events]:  iter: 0    lr: N/A  max_mem: 4138M
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 2 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 30, in main
+    return trainer.train()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 484, in train
+    super().train(self.start_iter, self.max_iter)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 149, in train
+    self.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 273, in run_step
+    loss_dict = self.model(data)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 886, in forward
+    output = self.module(*inputs[0], **kwargs[0])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 54, in forward
+    self.refine.update_centroids(features["res4"], proposals)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 68, in update_centroids
+    confidence = self.calculate_confidence(features, proposals)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 101, in calculate_confidence
+    objectness_logits = torch.tensor([p.objectness_logits for p in proposals]).cuda()
+ValueError: only one element tensors can be converted to Python scalars
+

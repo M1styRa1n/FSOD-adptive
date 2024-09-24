@@ -1,0 +1,398 @@
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 3 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 17, in main
+    cfg = setup(args)
+  File "/users/acr23hk/paper/fsod-dc/src/utils/setup.py", line 26, in setup
+    cfg.merge_from_list(args.opts)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/config.py", line 143, in merge_from_list
+    return super().merge_from_list(cfg_list)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 243, in merge_from_list
+    _assert_with_logging(subkey in d, "Non-existent key: {}".format(full_key))
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 545, in _assert_with_logging
+    assert cond, msg
+AssertionError: Non-existent key:  #
+
+/var/spool/slurmd.spool/job3697193/slurm_script: line 56: OUTPUT_DIR: command not found
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 1 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 17, in main
+    cfg = setup(args)
+  File "/users/acr23hk/paper/fsod-dc/src/utils/setup.py", line 26, in setup
+    cfg.merge_from_list(args.opts)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/config.py", line 143, in merge_from_list
+    return super().merge_from_list(cfg_list)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 243, in merge_from_list
+    _assert_with_logging(subkey in d, "Non-existent key: {}".format(full_key))
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 545, in _assert_with_logging
+    assert cond, msg
+AssertionError: Non-existent key:  #
+
+/var/spool/slurmd.spool/job3697193/slurm_script: line 56: OUTPUT_DIR: command not found
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 17, in main
+    cfg = setup(args)
+  File "/users/acr23hk/paper/fsod-dc/src/utils/setup.py", line 26, in setup
+    cfg.merge_from_list(args.opts)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/config.py", line 143, in merge_from_list
+    return super().merge_from_list(cfg_list)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 243, in merge_from_list
+    _assert_with_logging(subkey in d, "Non-existent key: {}".format(full_key))
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 545, in _assert_with_logging
+    assert cond, msg
+AssertionError: Non-existent key:  #
+
+/var/spool/slurmd.spool/job3697193/slurm_script: line 56: OUTPUT_DIR: command not found
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 17, in main
+    cfg = setup(args)
+  File "/users/acr23hk/paper/fsod-dc/src/utils/setup.py", line 26, in setup
+    cfg.merge_from_list(args.opts)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/config.py", line 143, in merge_from_list
+    return super().merge_from_list(cfg_list)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 243, in merge_from_list
+    _assert_with_logging(subkey in d, "Non-existent key: {}".format(full_key))
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 545, in _assert_with_logging
+    assert cond, msg
+AssertionError: Non-existent key:  #
+
+/var/spool/slurmd.spool/job3697193/slurm_script: line 56: OUTPUT_DIR: command not found
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 17, in main
+    cfg = setup(args)
+  File "/users/acr23hk/paper/fsod-dc/src/utils/setup.py", line 26, in setup
+    cfg.merge_from_list(args.opts)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/config.py", line 143, in merge_from_list
+    return super().merge_from_list(cfg_list)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 243, in merge_from_list
+    _assert_with_logging(subkey in d, "Non-existent key: {}".format(full_key))
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 545, in _assert_with_logging
+    assert cond, msg
+AssertionError: Non-existent key:  #
+
+/var/spool/slurmd.spool/job3697193/slurm_script: line 56: OUTPUT_DIR: command not found
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 17, in main
+    cfg = setup(args)
+  File "/users/acr23hk/paper/fsod-dc/src/utils/setup.py", line 26, in setup
+    cfg.merge_from_list(args.opts)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/config.py", line 143, in merge_from_list
+    return super().merge_from_list(cfg_list)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 243, in merge_from_list
+    _assert_with_logging(subkey in d, "Non-existent key: {}".format(full_key))
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 545, in _assert_with_logging
+    assert cond, msg
+AssertionError: Non-existent key:  #
+
+/var/spool/slurmd.spool/job3697193/slurm_script: line 56: OUTPUT_DIR: command not found
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 17, in main
+    cfg = setup(args)
+  File "/users/acr23hk/paper/fsod-dc/src/utils/setup.py", line 26, in setup
+    cfg.merge_from_list(args.opts)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/config.py", line 143, in merge_from_list
+    return super().merge_from_list(cfg_list)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 243, in merge_from_list
+    _assert_with_logging(subkey in d, "Non-existent key: {}".format(full_key))
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 545, in _assert_with_logging
+    assert cond, msg
+AssertionError: Non-existent key:  #
+
+/var/spool/slurmd.spool/job3697193/slurm_script: line 56: OUTPUT_DIR: command not found
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 17, in main
+    cfg = setup(args)
+  File "/users/acr23hk/paper/fsod-dc/src/utils/setup.py", line 26, in setup
+    cfg.merge_from_list(args.opts)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/config.py", line 143, in merge_from_list
+    return super().merge_from_list(cfg_list)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 243, in merge_from_list
+    _assert_with_logging(subkey in d, "Non-existent key: {}".format(full_key))
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 545, in _assert_with_logging
+    assert cond, msg
+AssertionError: Non-existent key:  #
+
+/var/spool/slurmd.spool/job3697193/slurm_script: line 56: OUTPUT_DIR: command not found
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 17, in main
+    cfg = setup(args)
+  File "/users/acr23hk/paper/fsod-dc/src/utils/setup.py", line 26, in setup
+    cfg.merge_from_list(args.opts)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/config.py", line 143, in merge_from_list
+    return super().merge_from_list(cfg_list)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 243, in merge_from_list
+    _assert_with_logging(subkey in d, "Non-existent key: {}".format(full_key))
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 545, in _assert_with_logging
+    assert cond, msg
+AssertionError: Non-existent key:  #
+
+/var/spool/slurmd.spool/job3697193/slurm_script: line 56: OUTPUT_DIR: command not found
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 17, in main
+    cfg = setup(args)
+  File "/users/acr23hk/paper/fsod-dc/src/utils/setup.py", line 26, in setup
+    cfg.merge_from_list(args.opts)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/config.py", line 143, in merge_from_list
+    return super().merge_from_list(cfg_list)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 243, in merge_from_list
+    _assert_with_logging(subkey in d, "Non-existent key: {}".format(full_key))
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 545, in _assert_with_logging
+    assert cond, msg
+AssertionError: Non-existent key:  #
+
+/var/spool/slurmd.spool/job3697193/slurm_script: line 56: OUTPUT_DIR: command not found
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 17, in main
+    cfg = setup(args)
+  File "/users/acr23hk/paper/fsod-dc/src/utils/setup.py", line 26, in setup
+    cfg.merge_from_list(args.opts)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/config.py", line 143, in merge_from_list
+    return super().merge_from_list(cfg_list)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 243, in merge_from_list
+    _assert_with_logging(subkey in d, "Non-existent key: {}".format(full_key))
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 545, in _assert_with_logging
+    assert cond, msg
+AssertionError: Non-existent key:  #
+
+/var/spool/slurmd.spool/job3697193/slurm_script: line 56: OUTPUT_DIR: command not found
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 17, in main
+    cfg = setup(args)
+  File "/users/acr23hk/paper/fsod-dc/src/utils/setup.py", line 26, in setup
+    cfg.merge_from_list(args.opts)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/config.py", line 143, in merge_from_list
+    return super().merge_from_list(cfg_list)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 243, in merge_from_list
+    _assert_with_logging(subkey in d, "Non-existent key: {}".format(full_key))
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/yacs/config.py", line 545, in _assert_with_logging
+    assert cond, msg
+AssertionError: Non-existent key:  #
+
+/var/spool/slurmd.spool/job3697193/slurm_script: line 56: OUTPUT_DIR: command not found
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+slurmstepd: error: *** JOB 3697193 ON gpu03 CANCELLED AT 2024-09-17T00:39:18 ***

@@ -1,0 +1,231 @@
+save to: /users/acr23hk/paper/fsod-dc/dataset/check/voc/1726356812/base1/model_final-fsod.pth
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+[09/22 04:23:14 detectron2]: Rank of current process: 0. World size: 4
+[09/22 04:23:14 detectron2]: Full config saved to checkpoints/voc/1726975386/fsod1/1shot/seed1/config.yaml
+[09/22 04:23:16 fvcore.common.checkpoint]: [Checkpointer] Loading from ./pretrain/R-101.pkl ...
+[09/22 04:23:16 fvcore.common.checkpoint]: Reading a file from 'torchvision'
+[09/22 04:23:21 detectron2]: Loss: 0.0000
+[09/22 04:23:21 detectron2]: [CLS] Use dropout: p = 0.8
+Traceback (most recent call last):
+  File "main.py", line 36, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 1 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 26, in main
+    trainer = Trainer(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 376, in __init__
+    model = self.build_model(cfg)
+  File "/users/acr23hk/paper/fsod-dc/src/engine/trainer.py", line 33, in build_model
+    model = build_model(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/modeling/meta_arch/build.py", line 22, in build_model
+    model = META_ARCH_REGISTRY.get(meta_arch)(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 189, in wrapped
+    explicit_args = _get_args_from_config(from_config_func, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 245, in _get_args_from_config
+    ret = from_config_func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 26, in from_config
+    ret["refine"] = Refine(cfg, ret["backbone"].output_shape()["res4"])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 190, in wrapped
+    init_func(self, **explicit_args)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 28, in __init__
+    logger.info(f"[Refine] n = {num_classes}, α = {momentum}")
+NameError: name 'logger' is not defined
+
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+[09/22 04:23:30 detectron2]: Rank of current process: 0. World size: 4
+[09/22 04:23:30 detectron2]: Full config saved to checkpoints/voc/1726975386/fsod1/2shot/seed1/config.yaml
+[09/22 04:23:31 fvcore.common.checkpoint]: [Checkpointer] Loading from ./pretrain/R-101.pkl ...
+[09/22 04:23:31 fvcore.common.checkpoint]: Reading a file from 'torchvision'
+[09/22 04:23:37 detectron2]: Loss: 0.0002
+[09/22 04:23:37 detectron2]: [CLS] Use dropout: p = 0.8
+Traceback (most recent call last):
+  File "main.py", line 36, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 2 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 26, in main
+    trainer = Trainer(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 376, in __init__
+    model = self.build_model(cfg)
+  File "/users/acr23hk/paper/fsod-dc/src/engine/trainer.py", line 33, in build_model
+    model = build_model(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/modeling/meta_arch/build.py", line 22, in build_model
+    model = META_ARCH_REGISTRY.get(meta_arch)(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 189, in wrapped
+    explicit_args = _get_args_from_config(from_config_func, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 245, in _get_args_from_config
+    ret = from_config_func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 26, in from_config
+    ret["refine"] = Refine(cfg, ret["backbone"].output_shape()["res4"])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 190, in wrapped
+    init_func(self, **explicit_args)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 28, in __init__
+    logger.info(f"[Refine] n = {num_classes}, α = {momentum}")
+NameError: name 'logger' is not defined
+
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+[09/22 04:23:46 detectron2]: Rank of current process: 0. World size: 4
+[09/22 04:23:46 detectron2]: Full config saved to checkpoints/voc/1726975386/fsod1/3shot/seed1/config.yaml
+[09/22 04:23:47 fvcore.common.checkpoint]: [Checkpointer] Loading from ./pretrain/R-101.pkl ...
+[09/22 04:23:47 fvcore.common.checkpoint]: Reading a file from 'torchvision'
+[09/22 04:23:54 detectron2]: Loss: 0.0003
+[09/22 04:23:54 detectron2]: [CLS] Use dropout: p = 0.8
+Traceback (most recent call last):
+  File "main.py", line 36, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 26, in main
+    trainer = Trainer(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 376, in __init__
+    model = self.build_model(cfg)
+  File "/users/acr23hk/paper/fsod-dc/src/engine/trainer.py", line 33, in build_model
+    model = build_model(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/modeling/meta_arch/build.py", line 22, in build_model
+    model = META_ARCH_REGISTRY.get(meta_arch)(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 189, in wrapped
+    explicit_args = _get_args_from_config(from_config_func, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 245, in _get_args_from_config
+    ret = from_config_func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 26, in from_config
+    ret["refine"] = Refine(cfg, ret["backbone"].output_shape()["res4"])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 190, in wrapped
+    init_func(self, **explicit_args)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 28, in __init__
+    logger.info(f"[Refine] n = {num_classes}, α = {momentum}")
+NameError: name 'logger' is not defined
+
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+[09/22 04:24:03 detectron2]: Rank of current process: 0. World size: 4
+[09/22 04:24:03 detectron2]: Full config saved to checkpoints/voc/1726975386/fsod1/5shot/seed1/config.yaml
+[09/22 04:24:04 fvcore.common.checkpoint]: [Checkpointer] Loading from ./pretrain/R-101.pkl ...
+[09/22 04:24:04 fvcore.common.checkpoint]: Reading a file from 'torchvision'
+[09/22 04:24:13 detectron2]: Loss: 0.0005
+[09/22 04:24:13 detectron2]: [CLS] Use dropout: p = 0.8
+Traceback (most recent call last):
+  File "main.py", line 36, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 26, in main
+    trainer = Trainer(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 376, in __init__
+    model = self.build_model(cfg)
+  File "/users/acr23hk/paper/fsod-dc/src/engine/trainer.py", line 33, in build_model
+    model = build_model(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/modeling/meta_arch/build.py", line 22, in build_model
+    model = META_ARCH_REGISTRY.get(meta_arch)(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 189, in wrapped
+    explicit_args = _get_args_from_config(from_config_func, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 245, in _get_args_from_config
+    ret = from_config_func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 26, in from_config
+    ret["refine"] = Refine(cfg, ret["backbone"].output_shape()["res4"])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 190, in wrapped
+    init_func(self, **explicit_args)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 28, in __init__
+    logger.info(f"[Refine] n = {num_classes}, α = {momentum}")
+NameError: name 'logger' is not defined
+
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+[09/22 04:24:23 detectron2]: Rank of current process: 0. World size: 4
+[09/22 04:24:23 detectron2]: Full config saved to checkpoints/voc/1726975386/fsod1/10shot/seed1/config.yaml
+[09/22 04:24:24 fvcore.common.checkpoint]: [Checkpointer] Loading from ./pretrain/R-101.pkl ...
+[09/22 04:24:24 fvcore.common.checkpoint]: Reading a file from 'torchvision'
+[09/22 04:24:38 detectron2]: Loss: 0.0010
+[09/22 04:24:38 detectron2]: [CLS] Use dropout: p = 0.8
+Traceback (most recent call last):
+  File "main.py", line 36, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 26, in main
+    trainer = Trainer(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 376, in __init__
+    model = self.build_model(cfg)
+  File "/users/acr23hk/paper/fsod-dc/src/engine/trainer.py", line 33, in build_model
+    model = build_model(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/modeling/meta_arch/build.py", line 22, in build_model
+    model = META_ARCH_REGISTRY.get(meta_arch)(cfg)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 189, in wrapped
+    explicit_args = _get_args_from_config(from_config_func, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 245, in _get_args_from_config
+    ret = from_config_func(*args, **kwargs)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/rcnn.py", line 26, in from_config
+    ret["refine"] = Refine(cfg, ret["backbone"].output_shape()["res4"])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/config/config.py", line 190, in wrapped
+    init_func(self, **explicit_args)
+  File "/users/acr23hk/paper/fsod-dc/src/modeling/refine.py", line 28, in __init__
+    logger.info(f"[Refine] n = {num_classes}, α = {momentum}")
+NameError: name 'logger' is not defined
+

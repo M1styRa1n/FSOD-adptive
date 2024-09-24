@@ -1,0 +1,31 @@
+save to: /users/acr23hk/paper/fsod-dc/dataset/check/voc/1726356812/base1/model_final-fsod.pth
+Traceback (most recent call last):
+  File "main.py", line 31, in <module>
+    print(inspect.getfile(distutils.version.LooseVersion))
+NameError: name 'inspect' is not defined
+Traceback (most recent call last):
+  File "main.py", line 31, in <module>
+    print(inspect.getfile(distutils.version.LooseVersion))
+NameError: name 'inspect' is not defined
+Traceback (most recent call last):
+  File "main.py", line 31, in <module>
+    print(inspect.getfile(distutils.version.LooseVersion))
+NameError: name 'inspect' is not defined
+Traceback (most recent call last):
+  File "main.py", line 31, in <module>
+    print(inspect.getfile(distutils.version.LooseVersion))
+NameError: name 'inspect' is not defined
+Traceback (most recent call last):
+  File "main.py", line 31, in <module>
+    print(inspect.getfile(distutils.version.LooseVersion))
+NameError: name 'inspect' is not defined
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/users/acr23hk/paper/fsod-dc/tools/display_results.py", line 189, in <module>
+    main(args)
+  File "/users/acr23hk/paper/fsod-dc/tools/display_results.py", line 128, in main
+    table = open(os.path.join(root, "results.txt"), "w")
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoints/voc/1726627489/results.txt'

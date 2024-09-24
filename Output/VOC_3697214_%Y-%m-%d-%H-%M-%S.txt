@@ -1,0 +1,241 @@
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/users/acr23hk/paper/fsod-dc/tools/ckpt_surgery.py", line 128, in <module>
+    main(args)
+  File "/users/acr23hk/paper/fsod-dc/tools/ckpt_surgery.py", line 83, in main
+    sd = torch.load(inp_path, map_location="cpu")
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/users/acr23hk/paper/fsod-dc/1726443195/base1/model_final.pth'
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+[09/17 00:51:17 detectron2]: Rank of current process: 0. World size: 4
+[09/17 00:51:17 detectron2]: Full config saved to checkpoints/voc/1726530669/fsod1/1shot/seed1/config.yaml
+[09/17 00:51:19 fvcore.common.checkpoint]: [Checkpointer] Loading from ./pretrain/R-101.pkl ...
+[09/17 00:51:19 fvcore.common.checkpoint]: Reading a file from 'torchvision'
+[09/17 00:51:24 detectron2]: Loss: 0.0000
+[09/17 00:51:24 detectron2]: [CLS] Use dropout: p = 0.8
+[09/17 00:51:24 detectron2]: [Refine] n = 24, α = 0.1
+[09/17 00:51:24 d2.data.build]: Removed 0 images with no usable annotations. 20 images left.
+[09/17 00:51:24 d2.data.dataset_mapper]: [DatasetMapper] Augmentations used in training: [ResizeShortestEdge(short_edge_length=..., max_size=1333, sample_style='choice'), RandomFlip()]
+[09/17 00:51:24 d2.data.build]: Using training sampler TrainingSampler
+[09/17 00:51:24 d2.data.common]: Serializing 20 elements to byte tensors and concatenating them all ...
+[09/17 00:51:24 d2.data.common]: Serialized dataset takes 0.01 MiB
+[09/17 00:51:24 fvcore.common.checkpoint]: [Checkpointer] Loading from checkpoints/voc/1726530669/base1/model_final-fsod.pth ...
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 3 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 29, in main
+    trainer.resume_or_load(resume=args.resume)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 412, in resume_or_load
+    self.checkpointer.resume_or_load(self.cfg.MODEL.WEIGHTS, resume=resume)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/checkpoint.py", line 227, in resume_or_load
+    return self.load(path, checkpointables=[])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/checkpoint/detection_checkpoint.py", line 52, in load
+    ret = super().load(path, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/checkpoint.py", line 153, in load
+    assert os.path.isfile(path), "Checkpoint {} not found!".format(path)
+AssertionError: Checkpoint checkpoints/voc/1726530669/base1/model_final-fsod.pth not found!
+
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+[09/17 00:51:33 detectron2]: Rank of current process: 0. World size: 4
+[09/17 00:51:33 detectron2]: Full config saved to checkpoints/voc/1726530669/fsod1/2shot/seed1/config.yaml
+[09/17 00:51:34 fvcore.common.checkpoint]: [Checkpointer] Loading from ./pretrain/R-101.pkl ...
+[09/17 00:51:34 fvcore.common.checkpoint]: Reading a file from 'torchvision'
+[09/17 00:51:40 detectron2]: Loss: 0.0002
+[09/17 00:51:40 detectron2]: [CLS] Use dropout: p = 0.8
+[09/17 00:51:40 detectron2]: [Refine] n = 24, α = 0.1
+[09/17 00:51:40 d2.data.build]: Removed 0 images with no usable annotations. 40 images left.
+[09/17 00:51:40 d2.data.dataset_mapper]: [DatasetMapper] Augmentations used in training: [ResizeShortestEdge(short_edge_length=..., max_size=1333, sample_style='choice'), RandomFlip()]
+[09/17 00:51:40 d2.data.build]: Using training sampler TrainingSampler
+[09/17 00:51:40 d2.data.common]: Serializing 40 elements to byte tensors and concatenating them all ...
+[09/17 00:51:40 d2.data.common]: Serialized dataset takes 0.01 MiB
+[09/17 00:51:40 fvcore.common.checkpoint]: [Checkpointer] Loading from checkpoints/voc/1726530669/base1/model_final-fsod.pth ...
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 29, in main
+    trainer.resume_or_load(resume=args.resume)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 412, in resume_or_load
+    self.checkpointer.resume_or_load(self.cfg.MODEL.WEIGHTS, resume=resume)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/checkpoint.py", line 227, in resume_or_load
+    return self.load(path, checkpointables=[])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/checkpoint/detection_checkpoint.py", line 52, in load
+    ret = super().load(path, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/checkpoint.py", line 153, in load
+    assert os.path.isfile(path), "Checkpoint {} not found!".format(path)
+AssertionError: Checkpoint checkpoints/voc/1726530669/base1/model_final-fsod.pth not found!
+
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+[09/17 00:51:51 detectron2]: Rank of current process: 0. World size: 4
+[09/17 00:51:51 detectron2]: Full config saved to checkpoints/voc/1726530669/fsod1/3shot/seed1/config.yaml
+[09/17 00:51:52 fvcore.common.checkpoint]: [Checkpointer] Loading from ./pretrain/R-101.pkl ...
+[09/17 00:51:53 fvcore.common.checkpoint]: Reading a file from 'torchvision'
+[09/17 00:52:00 detectron2]: Loss: 0.0003
+[09/17 00:52:00 detectron2]: [CLS] Use dropout: p = 0.8
+[09/17 00:52:00 detectron2]: [Refine] n = 24, α = 0.1
+[09/17 00:52:00 d2.data.build]: Removed 0 images with no usable annotations. 60 images left.
+[09/17 00:52:00 d2.data.dataset_mapper]: [DatasetMapper] Augmentations used in training: [ResizeShortestEdge(short_edge_length=..., max_size=1333, sample_style='choice'), RandomFlip()]
+[09/17 00:52:00 d2.data.build]: Using training sampler TrainingSampler
+[09/17 00:52:00 d2.data.common]: Serializing 60 elements to byte tensors and concatenating them all ...
+[09/17 00:52:00 d2.data.common]: Serialized dataset takes 0.02 MiB
+[09/17 00:52:00 fvcore.common.checkpoint]: [Checkpointer] Loading from checkpoints/voc/1726530669/base1/model_final-fsod.pth ...
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 1 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 29, in main
+    trainer.resume_or_load(resume=args.resume)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 412, in resume_or_load
+    self.checkpointer.resume_or_load(self.cfg.MODEL.WEIGHTS, resume=resume)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/checkpoint.py", line 227, in resume_or_load
+    return self.load(path, checkpointables=[])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/checkpoint/detection_checkpoint.py", line 52, in load
+    ret = super().load(path, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/checkpoint.py", line 153, in load
+    assert os.path.isfile(path), "Checkpoint {} not found!".format(path)
+AssertionError: Checkpoint checkpoints/voc/1726530669/base1/model_final-fsod.pth not found!
+
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+[09/17 00:52:10 detectron2]: Rank of current process: 0. World size: 4
+[09/17 00:52:10 detectron2]: Full config saved to checkpoints/voc/1726530669/fsod1/5shot/seed1/config.yaml
+[09/17 00:52:11 fvcore.common.checkpoint]: [Checkpointer] Loading from ./pretrain/R-101.pkl ...
+[09/17 00:52:11 fvcore.common.checkpoint]: Reading a file from 'torchvision'
+[09/17 00:52:20 detectron2]: Loss: 0.0005
+[09/17 00:52:20 detectron2]: [CLS] Use dropout: p = 0.8
+[09/17 00:52:20 detectron2]: [Refine] n = 24, α = 0.1
+[09/17 00:52:20 d2.data.build]: Removed 0 images with no usable annotations. 100 images left.
+[09/17 00:52:20 d2.data.dataset_mapper]: [DatasetMapper] Augmentations used in training: [ResizeShortestEdge(short_edge_length=..., max_size=1333, sample_style='choice'), RandomFlip()]
+[09/17 00:52:20 d2.data.build]: Using training sampler TrainingSampler
+[09/17 00:52:20 d2.data.common]: Serializing 100 elements to byte tensors and concatenating them all ...
+[09/17 00:52:20 d2.data.common]: Serialized dataset takes 0.03 MiB
+[09/17 00:52:20 fvcore.common.checkpoint]: [Checkpointer] Loading from checkpoints/voc/1726530669/base1/model_final-fsod.pth ...
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 29, in main
+    trainer.resume_or_load(resume=args.resume)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 412, in resume_or_load
+    self.checkpointer.resume_or_load(self.cfg.MODEL.WEIGHTS, resume=resume)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/checkpoint.py", line 227, in resume_or_load
+    return self.load(path, checkpointables=[])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/checkpoint/detection_checkpoint.py", line 52, in load
+    ret = super().load(path, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/checkpoint.py", line 153, in load
+    assert os.path.isfile(path), "Checkpoint {} not found!".format(path)
+AssertionError: Checkpoint checkpoints/voc/1726530669/base1/model_final-fsod.pth not found!
+
+/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/setuptools/_distutils/version.py
+[09/17 00:52:29 detectron2]: Rank of current process: 0. World size: 4
+[09/17 00:52:29 detectron2]: Full config saved to checkpoints/voc/1726530669/fsod1/10shot/seed1/config.yaml
+[09/17 00:52:30 fvcore.common.checkpoint]: [Checkpointer] Loading from ./pretrain/R-101.pkl ...
+[09/17 00:52:30 fvcore.common.checkpoint]: Reading a file from 'torchvision'
+[09/17 00:52:45 detectron2]: Loss: 0.0010
+[09/17 00:52:45 detectron2]: [CLS] Use dropout: p = 0.8
+[09/17 00:52:45 detectron2]: [Refine] n = 24, α = 0.1
+[09/17 00:52:45 d2.data.build]: Removed 0 images with no usable annotations. 200 images left.
+[09/17 00:52:45 d2.data.dataset_mapper]: [DatasetMapper] Augmentations used in training: [ResizeShortestEdge(short_edge_length=..., max_size=1333, sample_style='choice'), RandomFlip()]
+[09/17 00:52:45 d2.data.build]: Using training sampler TrainingSampler
+[09/17 00:52:45 d2.data.common]: Serializing 200 elements to byte tensors and concatenating them all ...
+[09/17 00:52:45 d2.data.common]: Serialized dataset takes 0.05 MiB
+[09/17 00:52:46 fvcore.common.checkpoint]: [Checkpointer] Loading from checkpoints/voc/1726530669/base1/model_final-fsod.pth ...
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    launch(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 67, in launch
+    mp.spawn(
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 230, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in start_processes
+    while not context.join():
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 150, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 59, in _wrap
+    fn(i, *args)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/launch.py", line 126, in _distributed_worker
+    main_func(*args)
+  File "/users/acr23hk/paper/fsod-dc/main.py", line 29, in main
+    trainer.resume_or_load(resume=args.resume)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 412, in resume_or_load
+    self.checkpointer.resume_or_load(self.cfg.MODEL.WEIGHTS, resume=resume)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/checkpoint.py", line 227, in resume_or_load
+    return self.load(path, checkpointables=[])
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/detectron2/checkpoint/detection_checkpoint.py", line 52, in load
+    ret = super().load(path, *args, **kwargs)
+  File "/users/acr23hk/.conda/envs/paper1/lib/python3.8/site-packages/fvcore/common/checkpoint.py", line 153, in load
+    assert os.path.isfile(path), "Checkpoint {} not found!".format(path)
+AssertionError: Checkpoint checkpoints/voc/1726530669/base1/model_final-fsod.pth not found!
+
