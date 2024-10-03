@@ -22,8 +22,8 @@ class Refine(nn.Module):
         num_classes: int,
         momentum: float = 0.1,
         warmup_iters: int = 0,
-        initial_thresh: float = 0.2,  # 初始阈值
-        final_thresh: float = 0.8,    # 最终阈值
+        initial_thresh: float = 0.2, 
+        final_thresh: float = 0.8,    
         eps=1e-12,
     ):
         super().__init__()
@@ -33,14 +33,14 @@ class Refine(nn.Module):
         self.momentum = momentum
         self.warmup_iters = warmup_iters
         self.eps = eps
-        self.initial_thresh = initial_thresh  # 初始置信度阈值
-        self.final_thresh = final_thresh      # 最终置信度阈值
+        self.initial_thresh = initial_thresh 
+        self.final_thresh = final_thresh     
         self.fc = nn.Conv2d(input_dim, input_dim, 1, 1, 0, bias=True)
         self.fc.weight.data = torch.eye(input_dim).reshape(input_dim, -1, 1, 1)
         nn.init.zeros_(self.fc.bias.data)
         self.register_buffer("centroids", torch.zeros(num_classes, input_dim) + eps)
         
-        self.iter_count = 0  # 用于跟踪迭代次数
+        self.iter_count = 0  
 
     @classmethod
     def from_config(cls, cfg: CfgNode, input_shape: ShapeSpec):
@@ -66,16 +66,14 @@ class Refine(nn.Module):
 
     @property
     def current_thresh(self):
-        # 动态调整置信度阈值
         if self.iterations < self.warmup_iters:
             return self.initial_thresh
         else:
-            progress = min(1.0, (self.iterations - self.warmup_iters) / 10000)  # 假设最大迭代次数为10000
+            progress = min(1.0, (self.iterations - self.warmup_iters) / 10000) 
             return self.initial_thresh + progress * (self.final_thresh - self.initial_thresh)
 
     @torch.no_grad()
     def update_centroids(self, features, proposals):
-        # 每次调用时递增迭代次数
         self.iter_count += 1
 
         if self.momentum == 0 or self.iterations < self.warmup_iters:
@@ -84,11 +82,10 @@ class Refine(nn.Module):
         gt_boxes = [x.gt_boxes for x in proposals]
         features = torch.flatten(self.pooler([features], gt_boxes), start_dim=1)
 
-        # 计算特征和质心之间的相似度
+        # caculate the simliar with different 
         simm = F.normalize(F.dropout(features, p=0.5), dim=1).matmul(
             F.normalize(self.centroids, dim=1).T
         )
-        # 根据动态置信度阈值筛选样本
         mask = torch.zeros_like(simm).scatter(1, simm.argmax(dim=1, keepdim=True), 1.0)
         high_confidence_mask = simm.max(dim=1)[0] > self.current_thresh
         mask = mask * high_confidence_mask.unsqueeze(1)
